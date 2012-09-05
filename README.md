@@ -1,4 +1,4 @@
-DotcompanyGWTJS-AutomacaoERP teste commit
+DotcompanyGWTJS-AutomacaoERP teste segundo commit
 ============================
 
 DotcompanyGWTJS-AutomacaoERP
