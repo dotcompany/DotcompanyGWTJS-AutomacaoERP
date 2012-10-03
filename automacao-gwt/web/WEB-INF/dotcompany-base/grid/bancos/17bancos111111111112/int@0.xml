@@ -1,0 +1,19 @@
+<br.com.automacao.shared.fo.FileColumn>
+  <key>17bancos111111111112</key>
+  <nameClasse>br.com.automacao.shared.mirror.BancosMirror</nameClasse>
+  <height>660</height>
+  <width>800</width>
+  <positionX>54</positionX>
+  <positionY>283</positionY>
+  <colunas>
+    <br.com.automacao.shared.fo.Column>
+      <nome>id</nome>
+      <label>Código</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>150</size>
+      <posicao>0</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <null/>
+  </colunas>
+</br.com.automacao.shared.fo.FileColumn>

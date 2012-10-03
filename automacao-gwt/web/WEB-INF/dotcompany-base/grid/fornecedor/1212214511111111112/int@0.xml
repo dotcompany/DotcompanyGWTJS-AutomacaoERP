@@ -1,0 +1,34 @@
+<br.com.automacao.shared.fo.FileColumn>
+  <key>1212214511111111112</key>
+  <nameClasse>br.com.automacao.shared.mirror.FornecedorMirror</nameClasse>
+  <height>660</height>
+  <width>800</width>
+  <positionX>26</positionX>
+  <positionY>283</positionY>
+  <colunas>
+    <br.com.automacao.shared.fo.Column>
+      <nome>id</nome>
+      <label>Código</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>150</size>
+      <posicao>0</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>cpf</nome>
+      <label>Cpf</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>75</size>
+      <posicao>1</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>nome</nome>
+      <label>Nome</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>100</size>
+      <posicao>2</posicao>
+    </br.com.automacao.shared.fo.Column>
+  </colunas>
+</br.com.automacao.shared.fo.FileColumn>

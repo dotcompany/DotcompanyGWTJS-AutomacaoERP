@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<title>DotCompany</title>
+<link rel="stylesheet" type="text/css" href="gxt/css/gxt-all.css" />
+<link rel="stylesheet" type="text/css"
+	href="gxt/desktop/css/desktop.css" />
+<link rel="stylesheet" type="text/css" href="samples/css/resources.css" />
+<link rel="stylesheet" type="text/css"
+	href="samples/desktop/css/desktopapp.css" />
+<link rel="stylesheet" type="text/css" href="Dotcompany_gwt.css" />
+
+<script type="text/javascript" src="resources/js/relogio.js"></script>
+
+
+<meta name="gwt:property" content="locale=pl_PL">
+<style>
+#loading {
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	margin-left: -45px;
+	padding: 2px;
+	z-index: 20001;
+	height: auto;
+	border: 1px solid #ccc;
+}
+
+#loading a {
+	color: #225588;
+}
+
+#loading .loading-indicator {
+	background: white;
+	color: #444;
+	font: bold 13px tahoma, arial, helvetica;
+	padding: 10px;
+	margin: 0;
+	height: auto;
+}
+
+#loading .loading-indicator img {
+	margin-right: 8px;
+	float: left;
+	vertical-align: top;
+}
+
+#loading-msg {
+	font: normal 10px arial, tahoma, sans-serif;
+}
+
+.search-item {
+	font: normal 11px tahoma, arial, helvetica, sans-serif;
+	padding: 3px 10px 3px 10px;
+	border: 1px solid #fff;
+	border-bottom: 1px solid #eeeeee;
+	white-space: normal;
+	color: #555;
+}
+
+.search-item h3 {
+	display: block;
+	font: inherit;
+	font-weight: bold;
+	color: #222;
+}
+
+.search-item h3 span {
+	float: right;
+	font-weight: normal;
+	margin: 0 0 5px 5px;
+	width: 100px;
+	display: block;
+	clear: none;
+}
+
+#relogio {
+	float: right;
+	font: normal 12px arial, tahoma, sans-serif;
+	padding: 0px 5px 4px 0px;
+	margin-left: 93%;
+	margin-top: 96%;
+	width: 90px;
+	height: 26px;
+	position: absolute;
+	z-index: 11;
+	background: url( http://idesconhecido.com.br/relogio.png  ) no-repeat;
+}
+#x-shortcuts {
+	width: 70%; height: 30%;
+}
+
+</style>
+
+</head>
+<body onload=startclock() style="overflow: hidden">
+
+	<script type="text/javascript" src="resources/js/relogio.js"></script>
+	<script language='javascript'
+		src='br.com.automacao.DesktopApp/br.com.automacao.DesktopApp.nocache.js'></script>
+
+	<iframe src="javascript:''" id="__gwt_historyFrame"
+		style="width: 0; height: 0; border: 0"> </iframe>
+	    <div id="x-desktop">
+		 <div id="relogio">
+			<FORM name=clock onsubmit=1>
+				<input type='text' value="" name=face	style=" margin-left: 34%;  background-color:transparent; width: 70px; height: 30px; font-size: 100%; color: white; no-repeat; border-left-width: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px;" />
+
+			</FORM>
+		</div>
+		<dl>
+		<dt id="x-shortcuts">
+
+		</dt>
+		</dl>
+			
+	</div>
+</body>
+</html>

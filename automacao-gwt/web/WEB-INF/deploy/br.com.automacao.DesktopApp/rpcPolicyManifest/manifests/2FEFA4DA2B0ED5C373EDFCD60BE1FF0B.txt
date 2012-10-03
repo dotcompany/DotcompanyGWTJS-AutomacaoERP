@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.ColaboradorService
+path: 8C39D1B75ED0D2405110097A66FE794D.gwt.rpc

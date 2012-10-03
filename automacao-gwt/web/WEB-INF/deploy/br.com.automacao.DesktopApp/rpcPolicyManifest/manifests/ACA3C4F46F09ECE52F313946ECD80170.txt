@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.ModuloService
+path: 4E8FED9373C009B9AD9DDC030E34B7BA.gwt.rpc

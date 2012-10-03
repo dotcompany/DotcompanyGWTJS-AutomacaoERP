@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.WesleyService
+path: 931E86746814FDFC045F10CE62AFA735.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.SubCategoriaService
+path: E310612EBB0E11DF568446BC3ACD3D14.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.CnaeService
+path: 292EF37E75B1FAA930D8A3E586831D70.gwt.rpc

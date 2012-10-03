@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.AgenciaBancoService
+path: BF9FC48FBAA7778019A4BFA5146492D4.gwt.rpc

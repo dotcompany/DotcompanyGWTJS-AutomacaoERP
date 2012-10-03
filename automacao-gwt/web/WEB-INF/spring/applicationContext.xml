@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:aop="http://www.springframework.org/schema/aop"
+     xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:tx="http://www.springframework.org/schema/tx"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+					     http://www.springframework.org/schema/context
+					     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+					     http://www.springframework.org/schema/tx
+					     http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+					     http://www.springframework.org/schema/aop
+					     http://www.springframework.org/schema/aop/spring-aop-3.1.xsd"
+					     default-autowire="byName">
+							
+	<!-- ==============================================================================
+    = Configurer that replaces ${...} placeholders with values from a properties file =
+    = & properties accesor to be injected in the services.							  = 
+	=============================================================================== -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+		   		<value>/resources/properties/dataSource.properties</value>
+		   		<value>/resources/properties/startup.properties</value>
+            </list>
+        </property>
+        <property name="localOverride" value="true" />
+    </bean>
+    
+    <!--
+        Activates various annotations to be detected in bean classes: Spring's
+        @Required and @Autowired, as well as JSR 250's @PostConstruct,
+        @PreDestroy and @Resource (if available) and JPA's @PersistenceContext
+        and @PersistenceUnit (if available).
+    -->
+    <context:annotation-config/>
+    
+    <!--
+        The controllers are autodetected POJOs labeled with the @Controller annotation.
+        DefaultAnnotationHandlerMapping is driven by these annotations and is 
+        enabled by default with Java 5+:
+    -->
+	<context:component-scan base-package="br.com.dotcompany" scoped-proxy="targetClass">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <!--  inicializa objetos de negocio do projeto modelo -->
+    <context:component-scan base-package="br.com.automacao.ctr" scoped-proxy="targetClass">
+        <context:include-filter type="annotation"  expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <context:component-scan base-package="br.com.automacao.service" scoped-proxy="targetClass">
+        <context:include-filter type="annotation"  expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <!-- Persistence -->
+    <import resource="persistence-config.xml"/>
+
+	<!-- setando o contexto do spring -->
+	<bean name="applicationContext" class="br.com.dotcompany.context.SpringCtxHolder"/>
+</beans>

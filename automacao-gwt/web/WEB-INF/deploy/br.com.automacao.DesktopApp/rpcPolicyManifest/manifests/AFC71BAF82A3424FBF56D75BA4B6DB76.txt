@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.PessoaService
+path: 64AC55D834DCF242A36F152F67B934DD.gwt.rpc

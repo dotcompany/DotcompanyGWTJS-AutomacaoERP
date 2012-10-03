@@ -1,0 +1,42 @@
+<br.com.automacao.shared.fo.FileColumn>
+  <key>1180Modelossd1123</key>
+  <nameClasse>br.com.automacao.shared.mirror.ModelosMirror</nameClasse>
+  <height>660</height>
+  <width>800</width>
+  <positionX>188</positionX>
+  <positionY>203</positionY>
+  <colunas>
+    <br.com.automacao.shared.fo.Column>
+      <nome>id</nome>
+      <label>Código</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>150</size>
+      <posicao>0</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>nome</nome>
+      <label>Nome</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>100</size>
+      <posicao>1</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>qtddiasdegarantia</nome>
+      <label>Qtd. dias de garantia</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>525</size>
+      <posicao>2</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>termosdagarantia</nome>
+      <label>Termos da Garantia</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>450</size>
+      <posicao>3</posicao>
+    </br.com.automacao.shared.fo.Column>
+  </colunas>
+</br.com.automacao.shared.fo.FileColumn>

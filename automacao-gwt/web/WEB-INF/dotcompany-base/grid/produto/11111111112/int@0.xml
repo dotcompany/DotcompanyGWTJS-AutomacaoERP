@@ -1,0 +1,46 @@
+<br.com.automacao.shared.fo.FileColumn>
+  <key>11111111112</key>
+  <nameClasse>br.com.automacao.shared.mirror.ProdutoMirror</nameClasse>
+  <colunas>
+    <br.com.automacao.shared.fo.Column>
+      <nome>id</nome>
+      <label>Código</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>64</size>
+      <posicao>0</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>nome</nome>
+      <label>Nome</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>100</size>
+      <posicao>1</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>numeroSerial</nome>
+      <label>Nº Serial</label>
+      <ativo>false</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>92</size>
+      <posicao>2</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>codigoBarras</nome>
+      <label>Código de barras</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>72</size>
+      <posicao>3</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>codigoFabricante</nome>
+      <label>Código de Fabricante</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>500</size>
+      <posicao>4</posicao>
+    </br.com.automacao.shared.fo.Column>
+  </colunas>
+</br.com.automacao.shared.fo.FileColumn>

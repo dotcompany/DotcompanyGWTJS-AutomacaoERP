@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.GrupoService
+path: 04E42059884831E6CFCCCC5C678C9CA5.gwt.rpc

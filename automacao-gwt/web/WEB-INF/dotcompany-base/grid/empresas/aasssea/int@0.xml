@@ -1,0 +1,50 @@
+<br.com.automacao.shared.fo.FileColumn>
+  <key>aasssea</key>
+  <nameClasse>br.com.automacao.shared.mirror.EmpresasMirror</nameClasse>
+  <height>682</height>
+  <width>1366</width>
+  <positionX>0</positionX>
+  <positionY>0</positionY>
+  <colunas>
+    <br.com.automacao.shared.fo.Column>
+      <nome>id</nome>
+      <label>Código</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>150</size>
+      <posicao>0</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>nomeempresa</nome>
+      <label>Nome da Empresa</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>375</size>
+      <posicao>1</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>razaosocial</nome>
+      <label>Razao Social</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>300</size>
+      <posicao>2</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>contato</nome>
+      <label>Contato</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>175</size>
+      <posicao>3</posicao>
+    </br.com.automacao.shared.fo.Column>
+    <br.com.automacao.shared.fo.Column>
+      <nome>total</nome>
+      <label>Total</label>
+      <ativo>true</ativo>
+      <tipoColuna>String</tipoColuna>
+      <size>125</size>
+      <posicao>4</posicao>
+    </br.com.automacao.shared.fo.Column>
+  </colunas>
+</br.com.automacao.shared.fo.FileColumn>

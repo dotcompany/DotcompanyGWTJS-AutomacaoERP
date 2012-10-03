@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.DepartamentoService
+path: 888B2699B3BC55BC6A0AC20505FEF952.gwt.rpc

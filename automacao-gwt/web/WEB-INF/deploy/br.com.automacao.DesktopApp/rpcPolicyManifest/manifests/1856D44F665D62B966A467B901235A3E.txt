@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.SubGrupoService
+path: FA7892A1FCB7C3128F25401DF320D891.gwt.rpc

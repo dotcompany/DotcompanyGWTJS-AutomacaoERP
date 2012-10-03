@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.GridService
+path: FA9B578C9FB32D3D82B0CEA1864F7E05.gwt.rpc

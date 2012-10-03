@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.SessaoService
+path: 0C0D29887A6EE782384F5613A4F4AEBA.gwt.rpc

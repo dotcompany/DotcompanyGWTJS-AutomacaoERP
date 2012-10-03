@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="make" default="aut-gwt-6" basedir=".">
+
+	<property name="DOT-CORE-HOME" value="../core" />
+	<property name="AUT-BUS-PATH" value="../automacao-bus" />
+	<property name="AUT-GWT-PATH" value="../automacao-gwt" />
+	<property name="LIBRARIES-PATH" value="../jars/"/>
+
+	<import file="${AUT-BUS-PATH}/build.xml" optional="true"/>
+
+	<target name="make">
+		<input message="Selecione a Tarefa que deseja executar: " validargs="goProjects,aut-gwt-6,goWar6" defaultvalue="aut-gwt-6" addproperty="valor"/>
+		<antcall target="${valor}"/>
+	</target>
+	
+	<target name="goProjects" description="Cria os jar's dos projetos que o GWT tem dependência.">
+		<!-- atualiza as classes de normalização -->
+		<!--  <antcall target="goBuildClass"/> -->
+		
+		<echo message="-- Atualizando os jars, de projetos titulares... --"/>
+		<delete file="${AUT-GWT-PATH}/web/WEB-INF/lib/dot-core.jar" />
+		<delete file="${AUT-GWT-PATH}/web/WEB-INF/lib/aut-bus.jar" />
+		<zip destfile="${AUT-GWT-PATH}/web/WEB-INF/lib/dot-core.jar">
+			<zipfileset dir="${DOT-CORE-HOME}/bin" />
+		</zip>
+		<zip destfile="${AUT-GWT-PATH}/web/WEB-INF/lib/aut-bus.jar">
+			<zipfileset dir="${AUT-BUS-PATH}/bin" />
+		</zip>
+	</target>
+
+	<target name="aut-gwt-6" description="Cria todas as dependências necessárias pra o projeto rodar no tomcat 6.">
+		<echo message="-- Atualizando jars necessários para o tomcat 6... --"/>
+		<!--<delete dir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>-->
+		<mkdir dir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/jaybird-2.1.6.jar" 													        todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/gwtent.jar" 													        todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<!-- gwt -->
+		<copy file="${LIBRARIES-PATH}/libs/gwt/2.4/gwt-dev.jar" 													todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/gwt/2.4/gwt-servlet.jar" 												todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/gwt/2.4/validation-api-1.0.0.GA.jar" 									todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/gxt/2.2.4/gxt-2.2.4-gwt22.jar" 											todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/gwt/spring4gwt/0.0.1/spring4gwt-0.0.1.jar"								todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		
+		<copy file="${LIBRARIES-PATH}/libs/servlet/2.5/servlet-api.jar" 											todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<copy file="${LIBRARIES-PATH}/libs/connector/mysql/mysql-connector-java-5.1.15-bin.jar" 					todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/connector/postgres/postgresql-8.3-603.jdbc3.jar" 						todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<copy file="${LIBRARIES-PATH}/libs/log4j/log4j-1.2.15.jar" 													todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		
+		<copy file="${LIBRARIES-PATH}/libs/json/json.jar" 															todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		
+		<copy file="${LIBRARIES-PATH}/libs/poi/poi.jar" 															todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<!-- hibernate -->
+		<copy file="${LIBRARIES-PATH}/libs/hibernate/hbn3/3.6.3.Final/hibernate3.jar" 								todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/hibernate/jpa/2.0/hibernate-jpa-2.0-api-1.0.0.Final.jar"					todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/hibernate/validator/4.1/hibernate-validator-4.1.0.jar" 					todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<!-- dependências hibernate -->	
+		<copy file="${LIBRARIES-PATH}/libs/antlr/2.7/antlr-2.7.6.jar" 												todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<copy file="${LIBRARIES-PATH}/libs/commons/collections/3.2/commons-collections-3.2.1.jar" 					todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/dom4j/1.6/dom4j-1.6.1.jar" 												todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/javassist/3.12/javassist-3.12.0.GA.jar" 									todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/jta/1.1/jta-1.1.jar" 													todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/slf4j/1.6/slf4j-api-1.6.1.jar" 											todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/slf4j/1.6/slf4j-log4j12-1.6.1.jar" 										todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<copy file="${LIBRARIES-PATH}/libs/commons/beanutils/1.7/commons-beanutils-1.7.0.jar" 						todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		
+		<copy file="${LIBRARIES-PATH}/libs/dozer/5.3.2/dozer-5.3.2.jar" 											todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<!-- spring framwork -->
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.aop-3.1.0.M1.jar"				todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.asm-3.1.0.M1.jar"				todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.beans-3.1.0.M1.jar" 			todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.context-3.1.0.M1.jar" 			todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.context.support-3.1.0.M1.jar"	todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.core-3.1.0.M1.jar"				todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.expression-3.1.0.M1.jar" 		todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.jdbc-3.1.0.M1.jar" 				todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.orm-3.1.0.M1.jar" 				todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.transaction-3.1.0.M1.jar"		todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/spring/framework/3.1/org.springframework.web-3.1.0.M1.jar"				todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<!-- dependências spring -->
+		<copy file="${LIBRARIES-PATH}/libs/commons/logging/1.1/commons-logging-1.1.1.jar"							todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/aopalliance/1.0/aopalliance-1.0.jar" 									todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/commons/dbcp/1.4/commons-dbcp-1.4.jar" 									todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/commons/pool/1.5/commons-pool-1.5.4.jar" 								todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<!-- java mail -->
+		<copy file="${LIBRARIES-PATH}/libs/commons/lang/2.4/commons-lang-2.4.jar" 									todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/velocity/1.6/velocity-1.6.2.jar" 										todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/javamail/1.4/mail-1.4.1.jar" 											todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		
+		<copy file="${LIBRARIES-PATH}/libs/caelum/stella/1.2/caelum-stella-core-1.2.jar" 							todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/quartz/quartz-1.7.3.jar"													todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/jxl/jxl.jar"																todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/xstream/1.3/xstream-1.3.1.jar"											todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/commons/fileupload/1.2/commons-fileupload-1.2.2.jar"						todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+		<copy file="${LIBRARIES-PATH}/libs/juli/juli-6.0.20.jar"													todir="${AUT-GWT-PATH}/web/WEB-INF/lib"/>
+
+		<!-- atualiza jar dos projetos -->
+		<antcall target="goProjects"/>
+	</target>
+
+	<target name="goWar6" description="Cria o arquivo war completo para distribuicao da aplicacao">
+		<input message="Digite o nome do arquivo WAR que sera gerado: " defaultvalue="automacao" addproperty="nome"/>
+		<echo message="-- Gerando a arquivo war para Tomcat 6... --"/>
+		<!--Apaga o arquivo.war-->
+		<delete file="${AUT-GWT-PATH}/gwtWar"/>
+		<mkdir dir="${AUT-GWT-PATH}/gwtWar"/>
+
+		<zip destfile="${AUT-GWT-PATH}/gwtWar/${nome}.war">
+			<zipfileset dir="${AUT-GWT-PATH}/web">
+				<!--Não inclui os fontes java nem os fontes IREPORT.-->
+				<exclude name="${AUT-GWT-PATH}/web/WEB-INF/classes/**/*.java"/>
+				<!--exclude name="${AUT-GWT-PATH}/web/resources/properties/configure.properties" /-->
+			</zipfileset>
+		</zip>
+	</target>
+</project>

@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.MarcaService
+path: 9289E40B0691A07210C7DDDC1180EF83.gwt.rpc

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:aop="http://www.springframework.org/schema/aop"
+     xmlns:tx="http://www.springframework.org/schema/tx"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+					     http://www.springframework.org/schema/tx
+					     http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+					     http://www.springframework.org/schema/aop
+					     http://www.springframework.org/schema/aop/spring-aop-3.1.xsd"
+					     default-lazy-init="true">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" autowire-candidate="false" lazy-init="false">
+   		<property name="driverClassName"><value>${hbn.database.driver}</value></property>
+		<property name="url"><value>${hbn.database.url}</value></property>
+		<property name="username"><value>${hbn.database.username}</value></property>
+		<property name="password"><value>${hbn.database.password}</value></property>
+		<property name="initialSize" value="5"/>
+		<property name="maxActive" value="10"/>
+		<property name="maxIdle" value="5"/>
+		<property name="minIdle" value="5"/>
+		<property name="maxWait" value="-1"/>
+		<property name="testOnBorrow" value="true"/>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+		<property name="numTestsPerEvictionRun" value="5"/>
+		<property name="minEvictableIdleTimeMillis" value="1800000"/>
+		<!-- <property name="validationQuery"><value>${hbn.validation.query}</value></property> -->
+	</bean>
+	<bean class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean" id="entityManagerFactory">
+        <property name="persistenceUnitName" value="MyPersistenceUnit"/>
+    </bean>
+    <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManagerJpa">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+	
+    
+ 	<!-- Hibernate session factory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!-- Referência ao recurso com banco de dados -->
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">${hbn.show.sql}</prop>
+				<prop key="hibernate.format_sql">${hbn.format.sql}</prop>
+				<prop key="hibernate.dialect">${hbn.database.dialect}</prop>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hbn.hbm2ddl.auto}</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+			</props>
+		</property>
+		<!-- Pacotes scaneados para registro das entidades persistentes -->
+		<property name="packagesToScan">
+			<list>
+				<value>br.com.dotcompany</value>
+				<value>br.com.automacao.ctr</value>
+			</list>
+		</property>
+    </bean>
+ 
+    <!-- Spring transaction management -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+         <property name="sessionFactory">
+            <ref local="sessionFactory"/>
+        </property>
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    
+   	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="hibernateDaoSupport" class="org.springframework.orm.hibernate3.support.HibernateDaoSupport" abstract="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+        <property name="hibernateTemplate">
+            <ref bean="hibernateTemplate"/>
+        </property>
+    </bean>
+
+    <bean id="dao" class="br.com.dotcompany.hibernate.DaoImpl" parent="hibernateDaoSupport"/>
+
+</beans>

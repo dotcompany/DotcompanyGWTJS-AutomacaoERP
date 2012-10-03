@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.GenericsService
+path: F83FFC05FF1EB5A06E90E6BFCD398077.gwt.rpc

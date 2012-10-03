@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.BancosService
+path: A8272EC20D14B75CF659550D4C6CD7E0.gwt.rpc

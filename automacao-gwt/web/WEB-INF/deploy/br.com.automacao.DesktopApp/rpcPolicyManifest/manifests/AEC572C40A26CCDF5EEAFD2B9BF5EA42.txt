@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.FuncaoService
+path: BA083EAF229493F66CABF0084305FB7D.gwt.rpc
