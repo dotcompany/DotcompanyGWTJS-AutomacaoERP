@@ -68,18 +68,15 @@ public class EmpresaMirror extends Mirror {
 	
 	private RegimeType tipoRegime;
 	
-	private ColaboradorMirror gestor;
 		
 	private CnaeMirror cnae;
 		
-	private Set<ColaboradorMirror> listaColaborador;
 	
 	private Set<EnderecoMirror> listaEndereco;
 	
 	private List<EmpresaModuloMirror> listaModulo;
 	
 	
-	private Set<ClienteMirror> listaCliente;
 	
 	
 	private Set<CaminhoImagemMirror> listaImagen;
@@ -211,12 +208,6 @@ public class EmpresaMirror extends Mirror {
 	public void setTipoEmitirNota(EmitirNfType tipoEmitirNota) {
 		this.tipoEmitirNota = tipoEmitirNota;
 	}
-	public ColaboradorMirror getGestor() {
-		return gestor;
-	}
-	public void setGestor(ColaboradorMirror gestor) {
-		this.gestor = gestor;
-	}
 	public String getHomePage() {
 		return homePage;
 	}
@@ -228,18 +219,6 @@ public class EmpresaMirror extends Mirror {
 	}
 	public void setUrlAmigavel(String urlAmigavel) {
 		this.urlAmigavel = urlAmigavel;
-	}
-//	public Set<EmpresaMirror> getListaFilial() {
-//		return listaFilial;
-//	}
-//	public void setListaFilial(Set<EmpresaMirror> listaFilial) {
-//		this.listaFilial = listaFilial;
-//	}
-	public Set<ColaboradorMirror> getListaColaborador() {
-		return listaColaborador;
-	}
-	public void setListaColaborador(Set<ColaboradorMirror> listaColaborador) {
-		this.listaColaborador = listaColaborador;
 	}
 	public Set<EnderecoMirror> getListaEndereco() {
 		return listaEndereco;
@@ -253,14 +232,6 @@ public class EmpresaMirror extends Mirror {
 	public void setListaModulo(List<EmpresaModuloMirror> listaModulo) {
 		this.listaModulo = listaModulo;
 	}
-
-	public Set<ClienteMirror> getListaCliente() {
-		return listaCliente;
-	}
-	public void setListaCliente(Set<ClienteMirror> listaCliente) {
-		this.listaCliente = listaCliente;
-	}
-
 	public CnaeMirror getCnae() {
 		return cnae;
 	}

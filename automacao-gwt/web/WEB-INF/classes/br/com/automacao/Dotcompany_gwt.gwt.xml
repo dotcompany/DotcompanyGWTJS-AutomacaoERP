@@ -23,5 +23,6 @@
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
   <source path='shared'/>
-
+  <!-- Modulos herdados -->
+  <inherits name='br.com.contaspagar.dotcompany_gwt_contaspagar'/>
 </module>

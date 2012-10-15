@@ -1,9 +1,6 @@
 package br.com.automacao.client.widget;
 
 import br.com.automacao.client.DesktopApp;
-import br.com.automacao.client.service.ClienteServiceAsync;
-import br.com.automacao.client.service.ColaboradorServiceAsync;
-import br.com.automacao.client.service.GenericsServiceAsync;
 import br.com.automacao.client.service.GridServiceAsync;
 import br.com.automacao.shared.mirror.UsuarioMirror;
 
@@ -81,18 +78,6 @@ public abstract class DotWindow extends Window {
 
 	protected static GridServiceAsync getServiceGrid() {
 		return DesktopApp.getServiceGrid();
-	}
-
-	protected static ClienteServiceAsync getServiceCliente() {
-		return DesktopApp.getServiceCliente();
-	}
-
-	protected static GenericsServiceAsync getServiceGenerics() {
-		return DesktopApp.getServiceGenerics();
-	}
-
-	protected static ColaboradorServiceAsync getServiceColab() {
-		return DesktopApp.getServiceColab();
 	}
 	
 }

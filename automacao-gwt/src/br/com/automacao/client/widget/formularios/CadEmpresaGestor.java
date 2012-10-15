@@ -3,7 +3,6 @@ package br.com.automacao.client.widget.formularios;
 import br.com.automacao.client.widget.DotFormulario;
 import br.com.automacao.client.widget.DotTextField;
 import br.com.automacao.client.widget.IForm;
-import br.com.automacao.shared.mirror.ColaboradorMirror;
 import br.com.automacao.shared.mirror.EmpresaMirror;
 import br.com.automacao.shared.mirror.UsuarioMirror;
 
@@ -132,38 +131,19 @@ public class CadEmpresaGestor extends IForm<EmpresaMirror> {
 	@Override
 	public void clear() {
 		super.doClear(formGestor.getFields());
-//		tfNome.clear();
-//		tfUsuario.clear();
-//		tfSenha.clear();
-//		tfRepetirSenha.clear();
-//		tfEmail.clear();
-//		tfRepetirEmail.clear();
 	}
 
 	@Override
 	public void fillDTO(EmpresaMirror dto) {
 		validate(tfNome, tfUsuario);
-		ColaboradorMirror colab = new ColaboradorMirror();
-		colab.setNome(tfNome.getValue());
-		colab.setEmpresa(dto);
-		
 		UsuarioMirror um = new UsuarioMirror();
 		um.setUsername(tfUsuario.getValue());
 		um.setSenha(tfSenha.getValue());
-		
-		dto.setGestor(colab);
 	}
 
 	@Override
 	public void loadFields(EmpresaMirror dto) {
-//		ReflectionCopy.copyFields(this.getClass(), formGestor.getFields(), dto, this);
-		
-		ColaboradorMirror gestor = dto.getGestor();
-		if(gestor != null){
-			tfNome.setValue(gestor.getNome());
-		} else 
-			clear();
-		
+			clear();	
 	}
 
 	@Override

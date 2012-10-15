@@ -22,9 +22,6 @@ public class FuncaoMirror extends Mirror {
 	private String metodo;
 	 
 	private EmpresaMirror empresa;
-	 
-	private Set<ColaboradorMirror> listaColaborador;
-
 	
 	public FuncaoMirror() { }
 	public FuncaoMirror(Long id) {
@@ -61,13 +58,6 @@ public class FuncaoMirror extends Mirror {
 	public void setEmpresa(EmpresaMirror empresa) {
 		this.empresa = empresa;
 	}
-	public Set<ColaboradorMirror> getListaColaborador() {
-		return listaColaborador;
-	}
-	public void setListaColaborador(Set<ColaboradorMirror> listaColaborador) {
-		this.listaColaborador = listaColaborador;
-	}
-	 
 	public Serializable getKey() {
 		return getId();
 	}

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.automacao.client.service.GridService;
-import br.com.automacao.ctr.entidade.ClienteTO;
+import br.com.automacao.ctr.entidade.EmpresaTO;
 import br.com.automacao.ctr.negocio.Grid;
 import br.com.automacao.server.repository.GridManagerBO;
 import br.com.automacao.shared.fo.FileColumn;
@@ -27,7 +27,7 @@ public class GridServiceImpl extends BaseService implements GridService {
 	public ListUtil busca(String nameClass, List<String> idColumns) {
 		try {
 			Class clazz = Class.forName(nameClass);
-			return new ListUtil(crud(Grid.class).busca(clazz, idColumns), crud(Generics.class).count(ClienteTO.class));
+			return new ListUtil(crud(Grid.class).busca(clazz, idColumns), crud(Generics.class).count(EmpresaTO.class));
 		} catch (ClassNotFoundException e) {
 			return null;
 		}

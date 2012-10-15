@@ -39,9 +39,6 @@ public class CaminhoImagemTO extends TransferObject {
 	@JoinColumn(name="id_empresa", nullable=false, referencedColumnName="id")
 	private EmpresaTO empresa;
 	
-	@ManyToOne
-	@JoinColumn(name="id_cliente", nullable=false, referencedColumnName="id")
-	private ClienteTO cliente;
 
 	public CaminhoImagemTO() { }
 	
@@ -62,12 +59,6 @@ public class CaminhoImagemTO extends TransferObject {
 	}
 	public void setEmpresa(EmpresaTO empresa) {
 		this.empresa = empresa;
-	}
-	public ClienteTO getCliente() {
-		return cliente;
-	}
-	public void setCliente(ClienteTO cliente) {
-		this.cliente = cliente;
 	}
 	@Override
 	public Serializable getKey() {

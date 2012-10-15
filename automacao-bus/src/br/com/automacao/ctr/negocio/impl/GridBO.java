@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.automacao.ctr.entidade.ClienteTO;
+import br.com.automacao.ctr.entidade.EmpresaTO;
 import br.com.automacao.ctr.negocio.Grid;
 import br.com.automacao.ctr.persistencia.GridPO;
 import br.com.dotcompany.exception.NegocioException;
@@ -49,7 +49,7 @@ public class GridBO implements Grid{
 	 * @return - lista de clientes buscado projetada e paginada.
 	 */
 	@Override
-	public List<ClienteTO> buscarTodos(Class<?> clazz, Integer start, Integer maxResults, String[] idColumns) throws NegocioException {
+	public List<EmpresaTO> buscarTodos(Class<?> clazz, Integer start, Integer maxResults, String[] idColumns) throws NegocioException {
 		return persistencia.buscarTodos(clazz, start, maxResults, Arrays.asList(idColumns));
 	}
 
@@ -63,12 +63,12 @@ public class GridBO implements Grid{
 	 * @param value - Valor para a pesquisa
 	 */
 	@Override
-	public List<ClienteTO> buscarFilter(Class<?> clazz, Integer start, Integer maxResults, String[] idColumns, String[] like) throws NegocioException {
+	public List<EmpresaTO> buscarFilter(Class<?> clazz, Integer start, Integer maxResults, String[] idColumns, String[] like) throws NegocioException {
 		return persistencia.buscarFilter(clazz, start, maxResults, idColumns, like);
 	}
 
 	@Override
-	public List<ClienteTO> buscarFilterAll(Class<?> clazz, Integer start, Integer maxResults, String value, String[] nomeColunas, String[] tipoColunas) throws NegocioException {
+	public List<EmpresaTO> buscarFilterAll(Class<?> clazz, Integer start, Integer maxResults, String value, String[] nomeColunas, String[] tipoColunas) throws NegocioException {
 		return persistencia.buscarFilterAll(clazz, start, maxResults, value, nomeColunas, tipoColunas);
 	}
 }

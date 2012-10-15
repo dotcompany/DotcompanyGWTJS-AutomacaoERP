@@ -14,7 +14,7 @@ import br.com.automacao.client.widget.grid.proxy.DotProxy;
 import br.com.automacao.client.widget.plugin.DotSearchTextField;
 import br.com.automacao.shared.fo.Column;
 import br.com.automacao.shared.fo.FileColumn;
-import br.com.automacao.shared.mirror.ClienteMirror;
+import br.com.automacao.shared.mirror.EmpresaMirror;
 import br.com.automacao.shared.model.DotModel;
 import br.com.automacao.shared.type.DirecaoType;
 import br.com.automacao.shared.util.ExportacaoListagem;
@@ -429,12 +429,12 @@ public class GridBase<M extends DotModel, T extends Mirror> extends DotWindow {
 		}
 		
 		ExportacaoListagem exp = new ExportacaoListagem();
-		exp.setUnidade(new ClienteMirror());
+		exp.setUnidade(new EmpresaMirror());
 		
 		exp.setDirecao(DirecaoType.ASC);
 		exp.setTamanhos(tamanhos);
 		exp.setRotulos(rotulos);
-		exp.setNome("Clientes");
+		exp.setNome("Empresas");
 		exp.setInicio(0);
 		exp.setLimite(2);
 		exp.setDados(new String[][]{});

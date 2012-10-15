@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import br.com.automacao.client.dialog.MsgDialog;
-import br.com.automacao.shared.mirror.PessoaMirror;
 import br.com.automacao.shared.util.Mirror;
 
 import com.extjs.gxt.ui.client.widget.TabItem;

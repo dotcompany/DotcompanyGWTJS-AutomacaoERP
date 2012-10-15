@@ -56,6 +56,7 @@
 			<list>
 				<value>br.com.dotcompany</value>
 				<value>br.com.automacao.ctr</value>
+				<value>br.com.contaspagar.ctr</value>
 			</list>
 		</property>
     </bean>

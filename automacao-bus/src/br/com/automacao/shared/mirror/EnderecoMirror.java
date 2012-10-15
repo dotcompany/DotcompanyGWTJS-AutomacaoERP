@@ -48,11 +48,7 @@ public class EnderecoMirror extends Mirror {
 	
 	private String pontoReferencia;
 	
-	private ClienteMirror cliente;
-	
 	private EmpresaMirror empresa;
-	
-	private ColaboradorMirror colaborador;
 	
 	public EnderecoMirror() { }
 	
@@ -126,23 +122,12 @@ public class EnderecoMirror extends Mirror {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-	public ClienteMirror getCliente() {
-		return cliente;
-	}
-	public void setCliente(ClienteMirror cliente) {
-		this.cliente = cliente;
-	}
+
 	public EmpresaMirror getEmpresa() {
 		return empresa;
 	}
 	public void setEmpresa(EmpresaMirror empresa) {
 		this.empresa = empresa;
-	}
-	public ColaboradorMirror getColaborador() {
-		return colaborador;
-	}
-	public void setColaborador(ColaboradorMirror colaborador) {
-		this.colaborador = colaborador;
 	}
 	public EnderecoType getTipo() {
 		return tipo;

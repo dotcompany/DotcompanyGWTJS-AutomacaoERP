@@ -17,7 +17,7 @@ public class EmpresaServiceImpl extends BaseService implements EmpresaService {
 	@Transactional(readOnly = false)
 	public void excluir(EmpresaMirror em) {
 		EmpresaTO empresa = crud(Generics.class).buscar(new EmpresaTO(em.getId()));
-		crud(Empresa.class).excluir(empresa);
+		crud(Generics.class).excluir(empresa);
 	}
 	
 	@Override
@@ -25,9 +25,9 @@ public class EmpresaServiceImpl extends BaseService implements EmpresaService {
 	public void saveUpdate(EmpresaMirror em) {
  		EmpresaTO to = converterTo(em);
 		if (em.getId() == null) {
-			crud(Empresa.class).incluir(to);
+			crud(Generics.class).incluir(to);
 		} else {
-			crud(Empresa.class).alterar(to);
+			crud(Generics.class).alterar(to);
 		}
 	}
 	
@@ -35,14 +35,14 @@ public class EmpresaServiceImpl extends BaseService implements EmpresaService {
 	@Transactional(readOnly = false)
 	public void incluir(EmpresaMirror em) {
 		EmpresaTO empresa = (EmpresaTO) converterTo(em);
-		crud(Empresa.class).incluir(empresa);
+		crud(Generics.class).incluir(empresa);
 	}
 	
 	@Override
 	@Transactional(readOnly = false)
 	public void alterar(EmpresaMirror em) {
 		EmpresaTO empresa = (EmpresaTO) converterTo(em);
-		crud(Empresa.class).alterar(empresa);
+		crud(Generics.class).alterar(empresa);
 	}
 
 	/* Método usado para sincronizar o mirror com o objeto do Banco de Dados */
@@ -66,7 +66,7 @@ public class EmpresaServiceImpl extends BaseService implements EmpresaService {
 	@Transactional(readOnly = true)
 	public EmpresaMirror pegar(EmpresaMirror em) {
 		EmpresaTO to = new EmpresaTO(); 
-		crud(Empresa.class).pegar((EmpresaTO)converterTo(em));
+		crud(Generics.class).pegar((EmpresaTO)converterTo(em));
 		return converterMirror(to);
 	}
 }

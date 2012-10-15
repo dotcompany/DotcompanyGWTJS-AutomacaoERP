@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.ContatoService
+path: 00BA1587DE42E73370F002A66D9FD7B6.gwt.rpc

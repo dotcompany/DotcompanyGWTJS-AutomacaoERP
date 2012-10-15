@@ -73,18 +73,12 @@ public class EnderecoTO extends TransferObject {
 	
 	@Column(name="ponto_referencia", length=100)
 	private String pontoReferencia;
-	
-	@ManyToOne
-	@JoinColumn(name="id_cliente", referencedColumnName="id")
-	private ClienteTO cliente;
+
 	
 	@ManyToOne
 	@JoinColumn(name="id_empresa", referencedColumnName="id")
 	private EmpresaTO empresa;
 	
-	@ManyToOne
-	@JoinColumn(name="id_colaborador", referencedColumnName="id")
-	private ColaboradorTO colaborador;
 	
 	public EnderecoTO() { }
 	
@@ -158,24 +152,14 @@ public class EnderecoTO extends TransferObject {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-	public ClienteTO getCliente() {
-		return cliente;
-	}
-	public void setCliente(ClienteTO cliente) {
-		this.cliente = cliente;
-	}
+
 	public EmpresaTO getEmpresa() {
 		return empresa;
 	}
 	public void setEmpresa(EmpresaTO empresa) {
 		this.empresa = empresa;
 	}
-	public ColaboradorTO getColaborador() {
-		return colaborador;
-	}
-	public void setColaborador(ColaboradorTO colaborador) {
-		this.colaborador = colaborador;
-	}
+
 	public EnderecoType getTipo() {
 		return tipo;
 	}

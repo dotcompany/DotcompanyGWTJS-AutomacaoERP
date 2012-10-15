@@ -42,10 +42,7 @@ public class FuncaoTO extends TransferObject {
 	@ManyToOne
 	@JoinColumn(name="id_empresa", nullable=false, referencedColumnName="id")
 	private EmpresaTO empresa;
-	 
-	@OnDelete(action=OnDeleteAction.CASCADE)
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="funcao")
-	private Set<ColaboradorTO> listaColaborador;
+	
 
 	
 	public FuncaoTO() { }
@@ -82,12 +79,6 @@ public class FuncaoTO extends TransferObject {
 	}
 	public void setEmpresa(EmpresaTO empresa) {
 		this.empresa = empresa;
-	}
-	public Set<ColaboradorTO> getListaColaborador() {
-		return listaColaborador;
-	}
-	public void setListaColaborador(Set<ColaboradorTO> listaColaborador) {
-		this.listaColaborador = listaColaborador;
 	}
 	 
 	@Override

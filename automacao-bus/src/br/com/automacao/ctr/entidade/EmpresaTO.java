@@ -113,18 +113,11 @@ public class EmpresaTO extends TransferObject {
 	@Enumerated(value = EnumType.STRING)
 	private RegimeType tipoRegime;
 	
-	@OnDelete(action=OnDeleteAction.CASCADE)
-	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, targetEntity=ColaboradorTO.class)
-	@JoinColumn(name="id_gestor")
-	private ColaboradorTO gestor;
 	
 	@OneToOne(targetEntity=CnaeTO.class, fetch=FetchType.LAZY)
 	@JoinColumn(name="id_cnae")
 	private CnaeTO cnae;
 		
-	@OnDelete(action=OnDeleteAction.CASCADE)
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="empresa")
-	private Set<ColaboradorTO> listaColaborador;
 	
 	@OnDelete(action=OnDeleteAction.CASCADE)
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="empresa")
@@ -133,11 +126,6 @@ public class EmpresaTO extends TransferObject {
 	@OnDelete(action=OnDeleteAction.CASCADE)
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="empresa")
 	private List<EmpresaModuloTO> listaModulo;
-	
-	
-	@OnDelete(action=OnDeleteAction.CASCADE)
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="empresa")
-	private Set<ClienteTO> listaCliente;
 	
 	
 	@OnDelete(action=OnDeleteAction.CASCADE)
@@ -272,12 +260,6 @@ public class EmpresaTO extends TransferObject {
 	public void setTipoEmitirNota(EmitirNfType tipoEmitirNota) {
 		this.tipoEmitirNota = tipoEmitirNota;
 	}
-	public ColaboradorTO getGestor() {
-		return gestor;
-	}
-	public void setGestor(ColaboradorTO gestor) {
-		this.gestor = gestor;
-	}
 	public String getHomePage() {
 		return homePage;
 	}
@@ -290,18 +272,7 @@ public class EmpresaTO extends TransferObject {
 	public void setUrlAmigavel(String urlAmigavel) {
 		this.urlAmigavel = urlAmigavel;
 	}
-//	public Set<EmpresaTO> getListaFilial() {
-//		return listaFilial;
-//	}
-//	public void setListaFilial(Set<EmpresaTO> listaFilial) {
-//		this.listaFilial = listaFilial;
-//	}
-	public Set<ColaboradorTO> getListaColaborador() {
-		return listaColaborador;
-	}
-	public void setListaColaborador(Set<ColaboradorTO> listaColaborador) {
-		this.listaColaborador = listaColaborador;
-	}
+
 	public Set<EnderecoTO> getListaEndereco() {
 		return listaEndereco;
 	}
@@ -314,12 +285,7 @@ public class EmpresaTO extends TransferObject {
 	public void setListaModulo(List<EmpresaModuloTO> listaModulo) {
 		this.listaModulo = listaModulo;
 	}
-	public Set<ClienteTO> getListaCliente() {
-		return listaCliente;
-	}
-	public void setListaCliente(Set<ClienteTO> listaCliente) {
-		this.listaCliente = listaCliente;
-	}
+
 	public CnaeTO getCnae() {
 		return cnae;
 	}

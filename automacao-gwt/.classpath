@@ -59,5 +59,6 @@
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/aut-bus.jar"/>
+	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/jars/libs/gxt-2.2.5/gxt-2.2.5-gwt22.jar"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>

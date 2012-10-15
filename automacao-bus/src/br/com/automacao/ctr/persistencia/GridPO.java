@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.automacao.ctr.entidade.ClienteTO;
+import br.com.automacao.ctr.entidade.EmpresaTO;
 import br.com.dotcompany.hibernate.AbstractHibernatePO;
 import br.com.dotcompany.util.BancoUtil;
 
@@ -26,18 +26,18 @@ public class GridPO extends AbstractHibernatePO{
 		return getDao().consultarLista(clazz, hql.toString());
 	}
 
-	public List<ClienteTO> buscarTodos(Class<?> clazz, Integer start, Integer maxResults, List<String> idColumns) {
+	public List<EmpresaTO> buscarTodos(Class<?> clazz, Integer start, Integer maxResults, List<String> idColumns) {
 		String hql = BancoUtil.createFieldsHql(" from "+clazz.getName(), idColumns);
-		return getDao().listaDemanda(ClienteTO.class, hql, start, maxResults);
+		return getDao().listaDemanda(EmpresaTO.class, hql, start, maxResults);
 	}
 
-	public List<ClienteTO> buscarFilter(Class<?> clazz, Integer start, Integer maxResults, String[] idColumns, String[] like) {
+	public List<EmpresaTO> buscarFilter(Class<?> clazz, Integer start, Integer maxResults, String[] idColumns, String[] like) {
 		String hql =  BancoUtil.createFieldsHqlLike(" from "+clazz.getName(), idColumns, like);
-		return getDao().listaDemanda(ClienteTO.class, hql, start, maxResults);
+		return getDao().listaDemanda(EmpresaTO.class, hql, start, maxResults);
 	}
 
-	public List<ClienteTO> buscarFilterAll(Class<?> clazz, Integer start, Integer maxResults, String value, String[] nomeColunas, String[] tipoColunas) {
+	public List<EmpresaTO> buscarFilterAll(Class<?> clazz, Integer start, Integer maxResults, String value, String[] nomeColunas, String[] tipoColunas) {
 		String hql = BancoUtil.createFieldsHqlFilterAll(" from "+clazz.getName(), value, nomeColunas, tipoColunas);
-		return getDao().listaDemanda(ClienteTO.class, hql, start, maxResults);
+		return getDao().listaDemanda(EmpresaTO.class, hql, start, maxResults);
 	}
 }

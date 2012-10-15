@@ -26,9 +26,6 @@ public class CaminhoImagemMirror extends Mirror {
 	
 	private EmpresaMirror empresa;
 	
-	private ClienteMirror cliente;
-	
-	private ColaboradorMirror colaborador;
 	
 
 	
@@ -52,19 +49,6 @@ public class CaminhoImagemMirror extends Mirror {
 	}
 	public void setEmpresa(EmpresaMirror empresa) {
 		this.empresa = empresa;
-	}
-	public ColaboradorMirror getColaborador() {
-		return colaborador;
-	}
-	public void setColaborador(ColaboradorMirror colaborador) {
-		this.colaborador = colaborador;
-	}
-	
-	public ClienteMirror getCliente() {
-		return cliente;
-	}
-	public void setCliente(ClienteMirror cliente) {
-		this.cliente = cliente;
 	}
 
 	public Serializable getKey() {

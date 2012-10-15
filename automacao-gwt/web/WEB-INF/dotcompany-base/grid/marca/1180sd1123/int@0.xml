@@ -3,8 +3,8 @@
   <nameClasse>br.com.automacao.shared.mirror.MarcaMirror</nameClasse>
   <height>660</height>
   <width>800</width>
-  <positionX>340</positionX>
-  <positionY>196</positionY>
+  <positionX>279</positionX>
+  <positionY>174</positionY>
   <colunas>
     <br.com.automacao.shared.fo.Column>
       <nome>id</nome>
