@@ -8,6 +8,8 @@ import br.com.automacao.client.service.FuncaoService;
 import br.com.automacao.client.service.FuncaoServiceAsync;
 import br.com.automacao.client.service.GenericsService;
 import br.com.automacao.client.service.GenericsServiceAsync;
+import br.com.automacao.client.service.GridEditavelService;
+import br.com.automacao.client.service.GridEditavelServiceAsync;
 import br.com.automacao.client.service.GridService;
 import br.com.automacao.client.service.GridServiceAsync;
 import br.com.automacao.client.service.ModuloService;
@@ -33,6 +35,8 @@ public abstract class ActionServer {
 			.create(SessaoService.class);
 	private static final EmpresaServiceAsync SERVICE_EMPRESA = GWT
 			.create(EmpresaService.class);
+	private static final GridEditavelServiceAsync SERVICE_GRIDEDITAVEL = GWT
+			.create(GridEditavelService.class);
 	
 	public static EmpresaServiceAsync getServiceEmpresa() {
 		return SERVICE_EMPRESA;
@@ -40,6 +44,9 @@ public abstract class ActionServer {
 
 	public static GridServiceAsync getServiceGrid() {
 		return SERVICE_GRID;
+	}
+	public static GridEditavelServiceAsync getServiceGridEditavel() {
+		return SERVICE_GRIDEDITAVEL;
 	}
 
 	public static GenericsServiceAsync getServiceGenerics() {

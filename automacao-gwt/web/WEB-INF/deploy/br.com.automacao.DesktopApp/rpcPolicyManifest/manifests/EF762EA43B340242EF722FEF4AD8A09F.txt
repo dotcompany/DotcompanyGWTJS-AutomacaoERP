@@ -1,0 +1,2 @@
+serviceClass: br.com.automacao.client.service.GridEditavelService
+path: 5CA782A3A3CFA8372C13B81002039893.gwt.rpc

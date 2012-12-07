@@ -6,12 +6,14 @@ import br.com.automacao.ctr.negocio.Empresa;
 import br.com.automacao.ctr.negocio.FormDinamico;
 import br.com.automacao.ctr.negocio.Funcao;
 import br.com.automacao.ctr.negocio.Grid;
+import br.com.automacao.ctr.negocio.GridEditavel;
 import br.com.automacao.ctr.negocio.Modulo;
 import br.com.automacao.ctr.negocio.impl.CnaeBO;
 import br.com.automacao.ctr.negocio.impl.EmpresaBO;
 import br.com.automacao.ctr.negocio.impl.FormDinamicoBO;
 import br.com.automacao.ctr.negocio.impl.FuncaoBO;
 import br.com.automacao.ctr.negocio.impl.GridBO;
+import br.com.automacao.ctr.negocio.impl.GridEditavelBO;
 import br.com.automacao.ctr.negocio.impl.ModuloBO;
 import br.com.dotcompany.context.SpringCtxHolder;
 import br.com.dotcompany.hibernate.Generics;
@@ -29,7 +31,8 @@ public class BusinessFactory extends SpringCtxHolder {
 	private static FormDinamico formDinamico;
 	private static Cnae cnae;
 	private static Funcao funcao;
-	private static Modulo modulo; 
+	private static Modulo modulo;
+	private static GridEditavel grideditavel; 
 	
 
 
@@ -46,6 +49,10 @@ public class BusinessFactory extends SpringCtxHolder {
 	public Grid getGrid() {
 		if (grid == null) {grid = super.getBean(GridBO.class);}
 		return grid;
+	}
+	public GridEditavel getGridEditavel() {
+		if (grideditavel == null) {grideditavel = super.getBean(GridEditavelBO.class);}
+		return grideditavel;
 	}
 
 

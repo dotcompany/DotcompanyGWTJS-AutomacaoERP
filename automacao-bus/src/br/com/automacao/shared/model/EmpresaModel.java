@@ -1,8 +1,13 @@
 package br.com.automacao.shared.model;
 
+import br.com.automacao.shared.fo.Column;
 import br.com.automacao.shared.fo.FileColumn;
 import br.com.automacao.shared.mirror.EmpresaMirror;
 import br.com.automacao.shared.util.Mirror;
+
+import com.extjs.gxt.ui.client.widget.form.TextField;
+import com.extjs.gxt.ui.client.widget.grid.CellEditor;
+import com.extjs.gxt.ui.client.widget.grid.ColumnConfig;
 
 @SuppressWarnings("serial")
 public class EmpresaModel extends DotModel{
@@ -47,11 +52,11 @@ public class EmpresaModel extends DotModel{
 
 	@Override
 	protected void createColumns(FileColumn fc) {
-		fc.addColumn(ID, "String", "Código", true);
-		fc.addColumn(CNPJ, "String", "CNPJ", true);
-		fc.addColumn(NOME_FANTASIA, "String", "Nome fantasia", true);
-		fc.addColumn(RAZAO_SOCIAL, "String", "Nome", true);
-		fc.addColumn(INSC_ESTADUAL, "String", "Descrição", true);
+		fc.addColumnEditavel(ID, "String", "Código", true,"Text");
+		fc.addColumnEditavel(CNPJ, "String", "CNPJ", true,"Combo");
+		fc.addColumnEditavel(NOME_FANTASIA, "String", "Nome fantasia", true,"Text");
+		fc.addColumnEditavel(RAZAO_SOCIAL, "String", "Nome", true,"Text");
+		fc.addColumnEditavel(INSC_ESTADUAL, "String", "Descrição", true,"Data");		
 	}
 
 	@Override

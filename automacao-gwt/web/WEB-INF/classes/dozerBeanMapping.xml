@@ -7,21 +7,13 @@
 		<class-b>br.com.automacao.ctr.entidade.CaminhoImagemTO</class-b>
 	</mapping>
 
-	<mapping>
-		<class-a>br.com.automacao.shared.mirror.ClienteMirror</class-a>
-		<class-b>br.com.automacao.ctr.entidade.ClienteTO</class-b>
-	</mapping>
-
+	
 	<mapping>
 		<class-a>br.com.automacao.shared.mirror.CnaeMirror</class-a>
 		<class-b>br.com.automacao.ctr.entidade.CnaeTO</class-b>
 	</mapping>
 
-	<mapping>
-		<class-a>br.com.automacao.shared.mirror.ColaboradorMirror</class-a>
-		<class-b>br.com.automacao.ctr.entidade.ColaboradorTO</class-b>
-	</mapping>
-
+	
 	<mapping>
 		<class-a>br.com.automacao.shared.mirror.EmpresaMirror</class-a>
 		<class-b>br.com.automacao.ctr.entidade.EmpresaTO</class-b>
@@ -43,17 +35,7 @@
 		<class-b>br.com.automacao.ctr.entidade.FuncaoTO</class-b>
 	</mapping>
 
-
-	<mapping>
-		<class-a>br.com.automacao.shared.mirror.MarcaMirror</class-a>
-		<class-b>br.com.automacao.ctr.entidade.MarcaTO</class-b>
-	</mapping>
-
-	<mapping>
-		<class-a>br.com.automacao.shared.mirror.ModelosMirror</class-a>
-		<class-b>br.com.automacao.ctr.entidade.ModelosTO</class-b>
-	</mapping>
-
+	
 	<mapping>
 		<class-a>br.com.automacao.shared.mirror.ModuloMirror</class-a>
 		<class-b>br.com.automacao.ctr.entidade.ModuloTO</class-b>
@@ -64,10 +46,5 @@
 		<class-b>br.com.automacao.ctr.entidade.ParametroTO</class-b>
 	</mapping>
 
-	<mapping>
-		<class-a>br.com.automacao.shared.mirror.ServicoColaboradorMirror
-		</class-a>
-		<class-b>br.com.automacao.ctr.entidade.ServicoColaboradorTO</class-b>
-	</mapping>
-
+	
 </mappings>

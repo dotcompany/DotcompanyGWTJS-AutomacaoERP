@@ -29,7 +29,6 @@
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/mail-1.4.1.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/mysql-connector-java-5.1.15-bin.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.aop-3.1.0.M1.jar"/>
-	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.asm-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.beans-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.context-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="/core/lib/org.springframework.context.support-3.1.0.M1.jar"/>
@@ -38,27 +37,28 @@
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.jdbc-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.orm-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.transaction-3.1.0.M1.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/org.springframework.web-3.1.0.M1.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/poi.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/postgresql-8.3-603.jdbc3.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/quartz-1.7.3.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/validation-api-1.0.0.GA.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/velocity-1.6.2.jar"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/xstream-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/org.springframework.web-3.1.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/poi/poi.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/postgresql-8.3-603.jdbc3.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/quartz/quartz-1.7.3.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/servlet/2.5/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/slf4j/1.6/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/slf4j/1.6/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/velocity/1.6/velocity-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/xstream/1.3/xstream-1.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/juli-6.0.20.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/dozer-5.3.2.jar" sourcepath="C:/Users/sergio/Downloads/dozer-5.3.2-src.zip"/>
-	<classpathentry kind="lib" path="web/WEB-INF/lib/gwtent.jar"/>
+	<classpathentry kind="lib" path="C:/dotcompany/gwterp/DotcompanyGWTJS-AutomacaoERP/jars/libs/gwtent.jar"/>
 	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/jaybird-2.1.6.jar"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/aut-bus.jar"/>
+	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.asm-3.1.0.M1.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/servlet-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/jasper.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/jsp-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
-	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/aut-bus.jar"/>
-	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/jars/libs/gxt-2.2.5/gxt-2.2.5-gwt22.jar"/>
+	<classpathentry kind="lib" path="C:/estrutura-marcos-codigos-fontes/DotcompanyGWTJS-AutomacaoERP/automacao-gwt/web/WEB-INF/lib/org.springframework.context.support-3.1.0.M1.jar"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>

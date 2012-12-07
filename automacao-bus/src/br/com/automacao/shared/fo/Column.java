@@ -15,6 +15,8 @@ public class Column implements IsSerializable{
 	private int size;
 	
 	private int posicao;
+	
+	private String editor;
 
 	public Column() {
 	}
@@ -29,6 +31,14 @@ public class Column implements IsSerializable{
 		this.label = label;
 		this.ativo = ativo;
 	}
+	public Column(String nome, String tipoColuna, String label, Boolean ativo,String editor) {
+		this.nome = nome;
+		this.tipoColuna = tipoColuna;
+		this.label = label;
+		this.ativo = ativo;
+		this.editor = editor;
+	}
+
 
 	public String getNome() {
 		return nome;
@@ -65,4 +75,13 @@ public class Column implements IsSerializable{
 	public void setSize(int size) {
 		this.size = size;
 	}
+
+	public String getEditor() {
+		return this.editor;
+	}
+
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+	
 }

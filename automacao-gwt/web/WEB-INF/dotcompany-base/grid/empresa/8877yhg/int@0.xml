@@ -3,8 +3,8 @@
   <nameClasse>br.com.automacao.shared.mirror.EmpresaMirror</nameClasse>
   <height>660</height>
   <width>800</width>
-  <positionX>185</positionX>
-  <positionY>247</positionY>
+  <positionX>0</positionX>
+  <positionY>0</positionY>
   <colunas>
     <br.com.automacao.shared.fo.Column>
       <nome>id</nome>
@@ -13,6 +13,7 @@
       <tipoColuna>String</tipoColuna>
       <size>150</size>
       <posicao>0</posicao>
+      <Editor>Text</Editor>
     </br.com.automacao.shared.fo.Column>
     <br.com.automacao.shared.fo.Column>
       <nome>cnpj</nome>
@@ -21,6 +22,7 @@
       <tipoColuna>String</tipoColuna>
       <size>100</size>
       <posicao>1</posicao>
+      <Editor>Combo</Editor>
     </br.com.automacao.shared.fo.Column>
     <br.com.automacao.shared.fo.Column>
       <nome>nomeFantasia</nome>
@@ -29,6 +31,7 @@
       <tipoColuna>String</tipoColuna>
       <size>325</size>
       <posicao>2</posicao>
+      <Editor>Text</Editor>
     </br.com.automacao.shared.fo.Column>
     <br.com.automacao.shared.fo.Column>
       <nome>razaoSocial</nome>
@@ -37,6 +40,7 @@
       <tipoColuna>String</tipoColuna>
       <size>100</size>
       <posicao>3</posicao>
+      <Editor>Text</Editor>
     </br.com.automacao.shared.fo.Column>
     <br.com.automacao.shared.fo.Column>
       <nome>inscEstadual</nome>
@@ -45,6 +49,7 @@
       <tipoColuna>String</tipoColuna>
       <size>225</size>
       <posicao>4</posicao>
+      <Editor>Data</Editor>
     </br.com.automacao.shared.fo.Column>
   </colunas>
 </br.com.automacao.shared.fo.FileColumn>

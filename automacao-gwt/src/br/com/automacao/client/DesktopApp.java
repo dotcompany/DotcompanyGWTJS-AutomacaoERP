@@ -114,8 +114,7 @@ public class DesktopApp extends ActionServer implements EntryPoint {
 		FileColumn fc = new FileColumn("8877yhg", EmpresaMirror.class.getName());
 		EmpresaModel em = new EmpresaModel(fc);
 		final DotProxy proxyEmpresa = new DotRpcProxy<EmpresaModel>(fc, em);
-		gridEmp = new GridBase<EmpresaModel, EmpresaMirror>(proxyEmpresa, fc,
-				"Cadastro Empresa");
+		gridEmp = new GridBase<EmpresaModel, EmpresaMirror>(proxyEmpresa,fc,"Cadastro Empresa");
 		Shortcut s3 = new Shortcut();
 		s3.setText("Empresa");
 		s3.setId("grid-win-shortcut");

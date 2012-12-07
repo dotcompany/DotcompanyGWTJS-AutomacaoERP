@@ -3,8 +3,15 @@ package br.com.automacao.client.widget.formularios;
 import br.com.automacao.client.widget.DotFormulario;
 import br.com.automacao.client.widget.DotTextField;
 import br.com.automacao.client.widget.IForm;
+import br.com.automacao.client.widget.grid.GridBaseEditavel;
+import br.com.automacao.client.widget.grid.GridSimples;
+import br.com.automacao.client.widget.grid.proxy.DotProxy;
+import br.com.automacao.client.widget.grid.proxy.DotRpcProxy;
+import br.com.automacao.ctr.negocio.GridEditavel;
+import br.com.automacao.shared.fo.FileColumn;
 import br.com.automacao.shared.mirror.EmpresaMirror;
 import br.com.automacao.shared.mirror.UsuarioMirror;
+import br.com.automacao.shared.model.EmpresaModel;
 
 import com.extjs.gxt.ui.client.event.BaseEvent;
 import com.extjs.gxt.ui.client.event.Events;
@@ -29,13 +36,21 @@ public class CadEmpresaGestor extends IForm<EmpresaMirror> {
 	private DotTextField<String> 			tfRepetirSenha = new DotTextField<String>();
 	private DotTextField<String> 			tfEmail = new DotTextField<String>();
 	private DotTextField<String>			tfRepetirEmail = new DotTextField<String>();
-
+	
+	private GridBaseEditavel<EmpresaModel, EmpresaMirror> gridEmp;
+	private FieldSet fsetGrid = new FieldSet();
+	
 	public CadEmpresaGestor(){
 		super(null);
 	}
 	
 	public CadEmpresaGestor(DotFormulario formulario){
 		super(formulario);
+		
+		FileColumn fc = new FileColumn("8877yhg", EmpresaMirror.class.getName());
+		EmpresaModel em = new EmpresaModel(fc);
+		final DotProxy proxyEmpresa = new DotRpcProxy<EmpresaModel>(fc, em);
+		gridEmp = new GridBaseEditavel<EmpresaModel, EmpresaMirror>(proxyEmpresa, fc,formulario);
 		
 		tabItemGeral.setLayout(new FitLayout());
 		formGestor.setFrame(true);
@@ -47,6 +62,7 @@ public class CadEmpresaGestor extends IForm<EmpresaMirror> {
 		
 		buildSenha();
 		buildEmail();
+		
 
 		Text txtNewText = new Text("Nome:");
 		fSet.add(txtNewText, new AbsoluteData(18, 28));
@@ -63,10 +79,11 @@ public class CadEmpresaGestor extends IForm<EmpresaMirror> {
 		tfUsuario.setSize("213px", "22px");
 		tfUsuario.setTabIndex(2);;
 		
-		fSet.setSize(845, 200);
+		//fSet.setSize(200, 200);
 		formGestor.add(fSet, new AbsoluteData(6, 3));
 		tabItemGeral.add(formGestor);
-		formGestor.setWidth("856px");
+		//formGestor.setWidth("856px");
+		buildFieldSetGrid();
 	}
 
 	private void buildEmail() {
@@ -126,6 +143,18 @@ public class CadEmpresaGestor extends IForm<EmpresaMirror> {
 				}
 			}
 		});
+	}
+	private void buildFieldSetGrid() {
+		fsetGrid.setLayout(new AbsoluteLayout());
+		fsetGrid.setCollapsible(false);
+		
+		gridEmp.setLayout(new AbsoluteLayout());
+		gridEmp.setAutoHeight(true);
+		gridEmp.setAutoWidth(true);
+		
+		fsetGrid.setHeading("Grid exemplo");
+		//fsetGrid.add(gridEmp);
+		fSet.add(gridEmp,new AbsoluteData(6, 130));
 	}
 
 	@Override

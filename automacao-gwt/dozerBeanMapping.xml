@@ -37,10 +37,5 @@
 		<class-a>br.com.automacao.shared.mirror.ModuloMirror</class-a>
 		<class-b>br.com.automacao.ctr.entidade.ModuloTO</class-b>
 	</mapping>
-	
-	<mapping>
-		<class-a>br.com.contaspagar.shared.mirror.DocumentoOrigemMirror</class-a>
-		<class-b>br.com.contaspagar.ctr.entidade.DocumentoOrigemTO</class-b>
-	</mapping>
 
 </mappings>

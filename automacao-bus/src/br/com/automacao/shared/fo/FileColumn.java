@@ -14,6 +14,8 @@ public class FileColumn extends FileObjectPersist {
 	private int positionX;
 	
 	private int positionY;
+	
+	private String editor;
 
 	private List<Column> colunas;
 
@@ -33,6 +35,9 @@ public class FileColumn extends FileObjectPersist {
 
 	public void addColumn(String nome, String tipo, String label, Boolean ativo) {
 		colunas.add(new Column(nome, tipo, label, ativo));
+	}
+	public void addColumnEditavel(String nome, String tipo, String label, Boolean ativo,String editor) {
+		colunas.add(new Column(nome, tipo, label, ativo,editor));
 	}
 
 	public void clear(){
@@ -83,4 +88,13 @@ public class FileColumn extends FileObjectPersist {
 	public void setPositionY(int positionY) {
 		this.positionY = positionY;
 	}
+
+	public String geteditor() {
+		return editor;
+	}
+
+	public void seteditor(String editor) {
+		this.editor = editor;
+	}
+	
 }

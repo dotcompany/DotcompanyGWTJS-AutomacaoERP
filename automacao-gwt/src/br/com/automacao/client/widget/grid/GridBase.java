@@ -49,6 +49,7 @@ import com.extjs.gxt.ui.client.widget.grid.ColumnModel;
 import com.extjs.gxt.ui.client.widget.grid.Grid;
 import com.extjs.gxt.ui.client.widget.grid.SummaryColumnConfig;
 import com.extjs.gxt.ui.client.widget.grid.filters.GridFilters;
+import com.extjs.gxt.ui.client.widget.layout.AbsoluteData;
 import com.extjs.gxt.ui.client.widget.layout.FitLayout;
 import com.extjs.gxt.ui.client.widget.menu.Menu;
 import com.extjs.gxt.ui.client.widget.menu.MenuItem;
@@ -225,7 +226,7 @@ public class GridBase<M extends DotModel, T extends Mirror> extends DotWindow {
 		grid.setStripeRows(true);  
 	    grid.setColumnLines(true);  
 	    grid.setColumnReordering(true);  
-		grid.setLayoutData(new FitLayout());
+		grid.setLayoutData(new AbsoluteData());
 		grid.addListener(Events.CellDoubleClick, new Listener<BaseEvent>() {
 			@Override
 			public void handleEvent(BaseEvent be) {
